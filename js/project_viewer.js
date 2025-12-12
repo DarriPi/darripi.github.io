@@ -126,6 +126,12 @@ inputCommand.addEventListener('keydown', function(event) {
     } 
 })
 
+function selectInputField() {
+  const inputField = document.getElementById('display-projects')
+
+  inputField.focus()
+  inputField.select()
+}
 
 // will simply close project app
 function closeProject() {

@@ -12,7 +12,7 @@
     <title>Darian Pietersen</title>
 </head>
 <body>
-    <div>
+    <div class="container">
         <!-- Icons -->
         <div class="iconsContainer">
             <div class="iconItem" onclick="aboutMe();addAppToStack('about-me')">
@@ -171,7 +171,7 @@
         </div>
 
         <!-- This is the console app for the project viewer -->
-        <div id="project" style="display: none;" onclick="changeZIndex(this)">
+        <div id="project" style="display: none;" onclick="changeZIndex(this);selectInputField()">
             <div id="project-header" class="app-header">
                     <div class="app-icon">
                         Console App
@@ -184,7 +184,7 @@
             <div id='project-display'>
                 Valid commands. 'ls projects', 'ls experience', 'exit' <br>
                 >
-                <input id='display-projects' type="text" autofocus>
+                <input id='display-projects' type="text" />
 
                 <!-- Table of projects will be displayed here -->
                 <div id="project-table-container">

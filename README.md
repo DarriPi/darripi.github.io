@@ -30,3 +30,5 @@ Just struck me that I need to list my experience as well.
 Will do that in the console app where the user can type in the following
 'ls experience' or 'ls projects'
 
+Problems and Issues to fix
+- Allow user to select textbox by just clicking on the app div
