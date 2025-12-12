@@ -1,0 +1,494 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* This is the background for the website */
+body {
+    background-image: url("../images/backgrounds/1.png"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: #cccccc; 
+}
+
+a:any-link {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline dotted;
+    font-weight: normal;
+}
+
+.about-me-socials a {
+  color: black;
+}
+
+/* This is just putting the different icons in grids */
+.iconsContainer {
+    position: absolute;
+    display: flex;
+    width: 160px;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    color: white;
+}
+.iconItem {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    height: 88px;
+    width: 60px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.iconItem:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.iconItem .iconImages{
+    height: 55px;
+    width: 55px;
+}
+
+.taskbar {
+    position: fixed;
+    display: block;
+    width: 100vw;
+    height: 38px;
+    bottom: 0; 
+    left: 0;
+    background-color: #1c1c1c;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-image: initial;
+    border-top-color: #404040;
+    color: white;
+    z-index: 100;
+}
+
+.taskbar .copy-right {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50%, -50%);
+    height: 30px;
+    font-size: 11.5px;
+    width: 200px;
+    margin-top: 9px;
+    border-width: 0px;
+    border-style: solid;
+    border-image: initial;
+    background-color: #1c1c1c;
+}
+
+.heart {
+    position: absolute;
+    left: 2px;
+    top: 0px;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-left: 3px;
+    height: 30px;
+}
+
+.time-display {
+    position: absolute;
+    right: 5px;
+    height: 30px;
+    font-size: 11.5px;
+    width: 80px;
+    margin-top: 3px;
+    margin-right: 5px;
+    border-width: 0px;
+    border-style: solid;
+    border-image: initial;
+}
+
+.taskbar .logos {
+    position: absolute;
+    right: 700px;
+    margin-top: 3px;
+    background-color: white;
+    position: center;
+}
+
+.app-icon {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  cursor: move;
+  z-index: 10;
+}
+
+#wallpapers {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#wallpapers-header {
+  background-color: #B09CA6;
+  font-weight: bold;
+  border: #1c1c1c;
+}
+
+#wallpaper-close {
+  background-color: #B09CA6;
+  width: 40px;
+  height: auto;
+  font-weight: bold;
+  border: none;
+  transition: background 0.2s ease-in-out;
+  /* border: 1px solid #1c1c1c; */
+}
+#wallpaper-close:hover {
+  background-color: #C97A89;
+}
+
+#wallpapers-images {
+  background-image: url("../images/wallpaper-app-background/blueish-grid.png");
+  overflow-y: scroll; /* Add vertical scrollbar if content overflows */
+  overflow-x: hidden;
+  height: 380px; /* Set a fixed height */
+  border: 1px solid #ccc; /* For visual clarity */
+  background-color: #8FAAAA;
+  padding: 10px;
+}
+
+/* Gray Scale */
+.wallpaper-image {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.wallpaper-image:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+  cursor: pointer;
+}
+
+
+#about-me {
+  position: absolute;
+  width: 560px;
+  height: auto;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#about-me-header {
+  background-color: rgb(20, 20, 20);
+  color: white;
+  font-weight: bold;
+  border: #1c1c1c;
+}
+
+#about-me-close {
+  background-color: rgb(20, 20, 20);
+  color: white;
+  width: 40px;
+  height: auto;
+  font-weight: bold;
+  border: none;
+}
+
+.about-me-content {
+  overflow-y: scroll; /* Add vertical scrollbar if content overflows */
+  overflow-x: hidden;
+  text-align: left;
+  font-size: 14px;
+  margin: 10px;
+  height: 350px;
+  width: 548px;
+}
+
+.about-me-socials {
+  text-align: center;
+}
+
+#email-form {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: left;
+}
+#email-form-header {
+   background-color: #2E2E2E;
+   font-weight: bold;
+   border: #1c1c1c;
+   color: white;
+}
+#email-form-input {
+  width: 550px;
+  margin-left: 25px;
+  margin-top: 7px;
+}
+
+.robot {
+    position: absolute;
+    left: 1300px;
+    top: 530px;
+    z-index: 100;
+}
+.robot img {
+    height: 60px;
+    width: 60px;
+}
+
+
+/* Styles for music player */
+#music-player {
+  position: absolute;
+  z-index: 9;
+  height: 200px;
+  width: 450px;
+}
+
+#music-player-header {
+  background-color: #C0A4B5;
+  color: black;
+  border: #1c1c1c;
+}
+
+.player {
+  /* height: 65vh; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: lightgreen;
+  /* Smoothly transition the background color */
+  transition: background-color .5s;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.track-art {
+  margin: 25px;
+  height: 125px;
+  width: 125px;
+  background-image: URL(
+     "https://source.unsplash.com/Qrspubmx6kE/640x360");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15%;
+}
+
+.track-name {
+  font-size: 25px;
+}
+
+.track-artist {
+  font-size: 15px;
+}
+
+/* Using flex with the row direction to
+   align items in a horizontal direction */
+.buttons {
+  display: flex;
+  flex-direction: row;
+  /* margin-left: 45%; */
+
+  align-items: center;
+}
+
+#project {
+  position: absolute;
+  width: 500px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+#project-header {
+   background-color: #2E2E2E;
+   font-weight: bold;
+   border: #1c1c1c;
+   color: white;
+}
+#project-display {
+  color: white;
+  background-color: black;
+  text-align: left;
+  height: 400px;
+}
+#project-display input {
+  color: white;
+  background-color: black;
+  border: 0;
+  outline: 0;
+  width: 95%;
+}
+#project-display input:focus{
+  outline: none, import !important;
+}
+#project-close, #email-close {
+  background-color: #2E2E2E;
+  color: white;
+  width: 40px;
+  height: auto;
+  font-weight: bold;
+  border: none;
+  transition: background 0.2s ease-in-out;
+  /* border: 1px solid #1c1c1c; */
+}
+#project-close:hover, #email-close:hover, #about-me-close:hover {
+  background-color: #C42B1C;
+  width: 40px;
+  height: auto;
+  font-weight: bold;
+  border: none;
+  transition: background 0.2s ease-in-out;
+}
+table {
+  width: 100%;
+  font-size: small;
+}
+#project-display {
+  overflow-y: scroll; /* Add vertical scrollbar if content overflows */
+  overflow-x: hidden;
+}
+
+.project-table, th, td {
+  color: white;
+  border: none;
+  text-align: left;
+  padding: 10px;
+  font-weight: normal;
+}
+
+.playpause-track,
+.prev-track,
+.next-track {
+  padding: 15px;
+  opacity: 0.8;
+  /* Smoothly transition the opacity */
+  transition: opacity .2s;
+}
+
+/* Change the opacity when mouse is hovered */
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+  opacity: 1.0;
+}
+
+/* Define the slider width so that it scales properly */
+.slider_container {
+  width: 75%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modify the appearance of the slider */
+.seek_slider, .volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: black;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* Modify the appearance of the slider thumb */
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+
+/* Change the opacity when mouse is hovered */
+.seek_slider:hover,
+.volume_slider:hover {
+  opacity: 1.0;
+}
+
+.seek_slider {
+  width: 60%;
+}
+
+.volume_slider {
+  width: 30%;
+}
+
+.current-time,
+.total-duration {
+  padding: 10px;
+}
+
+i.fa-volume-down,
+i.fa-volume-up {
+  padding: 10px;
+}
+
+/* Change the mouse cursor to a pointer
+   when hovered over */
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward {
+  cursor: pointer;
+}
+
+.btn-close {
+    background-color: #bbb;
+    height: 100%;
+}
+
+/* ******** SCROLL BAR STYLING ********* */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+

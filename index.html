@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- BOOSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Add before </head> in index.html -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Darian Pietersen</title>
+</head>
+<body>
+    <div>
+        <!-- Icons -->
+        <div class="iconsContainer">
+            <div class="iconItem" onclick="aboutMe();addAppToStack('about-me')">
+                <img class="iconImages" src="./images/icons/person.png">
+                <span>Me</span>
+            </div>
+            <div class="iconItem" onclick="projectViewer();addAppToStack('project')">
+                <img class="iconImages" src="./images/icons/computer.png">
+                <span>Console</span>
+            </div>
+            <div class="iconItem">
+                <a href="resources/Darian Pietersen CV.pdf" target="blank">
+                    <img class="iconImages" src="./images/icons/book.png">
+                    <span>CV</span>
+                </a>
+            </div>
+            <div class="iconItem" onclick="emailForm();addAppToStack('email-form')">
+                <!-- <a href="mailto:darianpietersen123@gmail.com"> -->
+                <img class="iconImages" src="./images/icons/letter.png">
+                <span>Email</span>
+                <!-- </a> -->
+            </div>
+            <div class="iconItem">
+                <a href="https://www.linkedin.com/in/darian-pietersen/" target="_blank">
+                    <img class="iconImages" src="./images/icons/linkedin (2).png">
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            <div class="iconItem">
+                <a href="https://github.com/DarriPi" target="_blank">
+                    <img class="iconImages" src="./images/icons/meme_cat.png">
+                    <span>Github</span>
+                </a>
+            </div>
+            <div id="wallpaperIcon" class="iconItem" onclick="wallpapers();addAppToStack('wallpapers')">
+                <img class="iconImages" src="./images/icons/painting.png">
+                <span>Wallpaper</span>
+            </div>
+            <!-- <div id="wallpaperIcon" class="iconItem" style="display: none;">
+                <img class="iconImages" src="./images/icons/games.png">
+                <span>Games</span>
+            </div> -->
+            <div id="musicPlayerIcon" class="iconItem" onclick="musicPlayer()" style="display: none;">
+                <img class="iconImages" src="./images/icons/music.png">
+                <span>Music</span>
+            </div>
+        </div>
+
+        <!-- ********************* HIDDEN CONTENT **************************** -->
+        <!-- Wallpapers division -->
+        <div id="wallpapers" style="display: none;" onclick="changeZIndex(this)">
+            <!-- header that can be used to drag -->
+            <div id="wallpapers-header" class="app-header">
+                    <div class="app-icon">
+                        <img src="images/icons/brick-wall.png" width="25px" height="25px">
+                        <i>
+                            Wallpapers
+                        </i>
+                    </div>
+                <button id="wallpaper-close" type="button" class="btn-close" aria-label="Close" onclick="closeWallpapers();addAppToStack('wallpapers');event.stopPropagation()">
+                    X
+                </button>
+            </div>
+
+            <div id="wallpapers-images"> 
+            </div>
+        </div>
+
+        <div id="about-me" style="display: none;" onclick="changeZIndex(this)">
+            <div id="about-me-header" class="app-header">
+                <div class="app-icon">
+                    <i>
+                        About Me
+                    </i>
+                </div>
+                <button id="about-me-close" type="button" class="btn-close" aria-label="Close" onclick="closeAboutMe();addAppToStack('about-me');event.stopPropagation()">
+                    X
+                </button>
+            </div>
+
+            <div class="about-me-content">
+                <div class="row mb-4">
+                    <div class="col">
+                        <img src="images/about-me/Me.jpg" alt="Photo of me" class="img-fluid">
+                    </div>
+                    <div class="col">
+                        <h2>About me</h2>
+                        <p>
+                            I am a Computer Science and 
+                            Business Management Graduate from the University of the Free State. 
+                            I am very passionate about Computer Science and eager to 
+                            learn the wide variety of topics within the field. 
+                            Currently learning more about AI.
+                        </p>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <h2>Skills</h2>
+                        <ul>
+                            <li>Software Development and Engineering</li>
+                            <li>Web Development</li>
+                            <li>Data Science and Analysis</li>
+                            <li>Programming</li>
+                            <li>Front-end Development</li>
+                            <li>Databases</li>
+                            <li>Statistical Analysis</li>
+                            <li>Data Structures</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <img src="images/about-me/computer-science.jpg" alt="Cat photo with computer" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <img src="images/about-me/piano_me.jpg" alt="Cat photo with computer" class="img-fluid">
+                    </div>
+                    <div class="col">
+                        <h2>Hobbies</h2>
+                        <ul>
+                            <li>Piano</li>
+                            <li>Judo</li>
+                            <li>Gaming</li>
+                            <li>Origami</li>
+                            <li>Poetry</li>
+                            <li>Photography</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-me-socials">
+                    <h2>Socials</h2>
+                    <li><a href="mailto:darianpietersen123@gmail.com">Email</a></li>
+                    <li><a href="https://github.com/DarriPi" target="_blank">GitHub</a></li>
+                    <li><a href="www.linkedin.com/in/darian-pietersen" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/darri_pi/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.youtube.com/@DarianPietersen" target="_blank">YouTube</a></li>
+                </div>
+            </div>
+        </div>
+
+        <!-- *************** TODO: Make a PDF "VIEWER" -->
+        <div id="pdf-viewer" style="display: none;" onclick="changeZIndex(this)">
+            <!-- header that can be used to drag -->
+            <div id="pdf-viewer-header" class="app-header">
+                <div class="app-icon">
+                    <img src="images/icons/brick-wall.png" width="25px" height="25px">
+                    <i>
+                        Wallpapers
+                    </i>
+                </div>
+                <button>
+                    X
+                </button>
+            </div>
+        </div>
+
+        <!-- This is the console app for the project viewer -->
+        <div id="project" style="display: none;" onclick="changeZIndex(this)">
+            <div id="project-header" class="app-header">
+                    <div class="app-icon">
+                        Console App
+                    </div>
+                    <button id="project-close" type="button" class="btn-close" aria-label="Close" onclick="closeProject();addAppToStack('project');event.stopPropagation()">
+                        X
+                    </button>
+            </div>
+
+            <div id='project-display'>
+                Valid commands. 'ls projects', 'ls experience', 'exit' <br>
+                >
+                <input id='display-projects' type="text" autofocus>
+
+                <!-- Table of projects will be displayed here -->
+                <div id="project-table-container">
+                    <table id="project-table" class="project-table" style="display: none;">
+                        <tr>
+                            <th>
+                                Project <br>
+                                -------
+                            </th>
+                            <th>
+                                Desciption <br>
+                                ----------
+                            </th>
+                            <th>
+                                Link <br>
+                                ----
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Personal Portfolio Website
+                            </td>
+                            <td>
+                                This very website that you are on right now! 
+                                Built using HTML, CSS, JavaScript, and Bootstrap.
+                            </td>
+                            <td>
+                                N/A
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Aesthetic Music Player
+                            </td>
+                            <td>
+                                Aesthetic Music Player that I made for CS50x 
+                                Introduction To Computer Science in 2023.
+                            </td>
+                            <td>
+                                <a href="https://youtu.be/WO33xr_JWg0?si=rOqUJ4P5MASFwMp-" target="_blank">
+                                    YouTube
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Lyric Application
+                            </td>
+                            <td>
+                                A lyric application coded in C# that is a simple animation showcasing lyrics to a song. 
+                                Can find the video on YouTube or the code on my GitHub.
+                            </td>
+                            <td>
+                                <a href="https://youtu.be/8JQhAL7LYmU?si=eA9R63rI06n28q9B" target="_blank">YouTube</a> and <br>
+                                <a href="https://github.com/DarriPi/Island_Song_Mini_App.git" target="_blank">GitHub</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Laser Tag Game via Computer Vision
+                            </td>
+                            <td>
+                                A real-time computer vision + WebSocket system built during 
+                                my Work Integrated Learning (CSIS3784) at UFS with BBD. 
+                            </td>
+                            <td>
+                                <a href="https://github.com/DarriPi/CSIS3784-WIL-assignment---interactive-computer-vision-app.git" target="_blank">
+                                    GitHub
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Attack On Titan Fanpage
+                            </td>
+                            <td>
+                                Attack On Titan fan page that I made for my first year assignment.
+                                We used only HTML and CSS so the page is not really responsive.
+                                The form was also a requirement but did not need to function.
+                            </td>
+                            <td>
+                                <a href="https://aotinfo.netlify.app/" target="_blank">Website</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="experience-table-container">
+                    <table id="experience-table" class="project" style="display: none;">
+                         <tr>
+                            <th>
+                                Job Title <br>
+                                -------
+                            </th>
+                            <th>
+                                Desciption <br>
+                                ----------
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Internship at QYF Company
+                            </td>
+                            <td>
+                                I acquired real-world work experience through projects with Absa, 
+                                FirstRand, FNB, Nedbank and Standard Bank in the field of data science 
+                                and data analysis.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                               BBD Vacation Work
+                            </td>
+                            <td>
+                                Selected from a group of over 20 students to participate in an
+                                 exclusive work experience program at BBD.
+                                 Contributed to the development of a web-based Laser Tag game,
+                                  focusing on creating an interactive and responsive frontend interface. 
+                                Implemented user-friendly designs and optimised the game for m obile devices
+                                 to ensure smooth and engaging gameplay.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- EMAIL FORM -->
+        <div id="email-form" class="email-box" style="display: none;" onclick="changeZIndex(this)">
+            <div id='email-form-header' class="app-header">
+                <div class="app-icon">
+                    Let's get in touch
+                </div>
+                <button id="email-close" type="button" class="btn-close" aria-label="Close" onclick="closeEmail();addAppToStack('email-form');event.stopPropagation()">
+                        X
+                </button>
+            </div>
+
+            <div id="email-form-input">
+                                    <!--
+                    Source - https://stackoverflow.com/a/8241925
+                    Posted by Yisela, modified by community. See post 'Timeline' for change history
+                    Retrieved 2025-12-08, License - CC BY-SA 4.0
+                    -->
+
+                <form name="contact_form"
+                action="https://formsubmit.co/darianpietersen123@gmail.com" method="post" >
+                    <input type="hidden" name="_subject" value="New email received!">
+                    <input type="hidden" name="_next" value="https://darripi.github.io/pages/thanks.html">
+
+                    <div class="form-group">
+                        <label for="name-input" class="form-label">Name</label>
+                        <input id='name-input' class="form-control" type="text" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email-address" class="form-label">Email Address</label>
+                        <input id='email-address' class="form-control" type="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                        <button class="btn btn-primary mt-3" type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- MUSIC PLAYER -->
+        <div id="music-player" class="player" style="display: none;" onclick="changeZIndex(this)">
+            <div id="music-player-header" class="app-header" style="background-color: blue;">
+                <div class="app-icon">
+                    <img src="images/icons/brick-wall.png" width="25px" height="25px">
+                    <i>
+                        Music Player
+                    </i>
+                </div>
+            </div>
+
+            <!-- Details of song -->
+             <div class="details">
+                <div class="now-playing">PLAYING x OF y</div>
+                <div class="track-name">Track Name</div>
+                <div class="track-artist">Track Artist</div>
+             </div>
+
+            <!-- Define the section for displaying track buttons -->
+            <div class="buttons">
+                <div class="prev-track" onclick="prevTrack()">
+                    <i class="fa fa-step-backward fa-2x"></i>
+                </div>
+                <div class="playpause-track" onclick="playpauseTrack()">
+                    <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+                <div class="next-track" onclick="nextTrack()">
+                    <i class="fa fa-step-forward fa-2x"></i>
+                </div>
+            </div>
+
+            <!-- Define the section for displaying the seek slider-->
+            <div class="slider_container">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100"
+                    value="0" class="seek_slider" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
+            </div>
+
+            <!-- Define the section for displaying the volume slider-->
+            <div class="slider_container">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100"
+                    value="99" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+            </div>
+        </div>
+
+
+        <!-- ****** Task bar  ****** -->
+        <footer>
+            <!-- ***** TODO: REMEMBER THE LITTLE AI ASSIST -->
+            <div class="robot" style="display: none;"> 
+                <img src="./images/icons/robot.png">
+            </div>
+            <div class="taskbar">
+                <div class="heart">
+                    <img src="./images/icons/heart.png" height="33px" width="33px">
+                </div>
+
+                <!-- Copy right -->
+                <div class="copy-right">
+                    Made by Darian Pietersen &copy; 2025
+                </div>
+
+                <div class="time-display" id="dateTime" style="text-align: right;">
+                    <span id="date"></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+<script src="js/script.js"></script>
+<script src="js/wallpapers.js"></script>
+<script src="js/music_player.js"></script>
+<script src="js/project_viewer.js"></script>
+<script src="js/email_form.js"></script>
+<script src="js/about_me.js"></script>
+<!-- Bootstrap JavaScript bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- Source - https://stackoverflow.com/a/8241925
+Posted by Yisela, modified by community. See post 'Timeline' for change history
+Retrieved 2025-12-08, License - CC BY-SA 4.0 -->
+<!-- <script language="JavaScript">
+    var frmvalidator  = new Validator("contactform");
+    frmvalidator.addValidation("name","req","Please provide your name");
+    frmvalidator.addValidation("email","req","Please provide your email");
+    frmvalidator.addValidation("email","email",
+    "Please enter a valid email address");
+</script> -->
+</body>
+</html>
