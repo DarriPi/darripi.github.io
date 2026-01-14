@@ -2,12 +2,12 @@
 This is a personal professional portfolio that is inspired by the vaporwave aesthetic and other websites that adopted the desktop design.
 
 # Important TODOs
-- [] Fix the scroll bar allignment
-- [] Make console app more user friendly for none CS people
-- [] The scrollbar appears in the console app even though there is no content overflowing the div. Need to fix that
-- [] Allow user to select text box by simply opening the email app
-- [] Add Music player
-- [] Add more wallpapers
+- [ ] Fix the scroll bar allignment
+- [ ] Make console app more user friendly for none CS people
+- [ ] The scrollbar appears in the console app even though there is no content overflowing the div. Need to fix that
+- [ ] Allow user to select text box by simply opening the email app
+- [ ] Add Music player
+- [ ] Add more wallpapers
   
 ## October 12 
 * I added the music player but I need to fix the volume button
