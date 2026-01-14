@@ -8,6 +8,7 @@ This is a personal professional portfolio that is inspired by the vaporwave aest
 - [ ] Allow user to select text box by simply opening the email app
 - [ ] Add Music player
 - [ ] Add more wallpapers
+- [ ] Optimize code
   
 ## October 12 
 * I added the music player but I need to fix the volume button
