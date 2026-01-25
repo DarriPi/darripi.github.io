@@ -9,6 +9,7 @@ This is a personal professional portfolio that is inspired by the vaporwave aest
 - [ ] Add Music player
 - [ ] Add more wallpapers
 - [ ] Optimize code
+- [ ] Fix some of the position of the elements in the site
   
 ## October 12 
 * I added the music player but I need to fix the volume button
