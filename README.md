@@ -4,6 +4,7 @@ This is a personal professional portfolio that is inspired by the vaporwave aest
 # Important TODOs
 - Make console app more user friendly for none CS people (DONE)
 - The scrollbar appears in the console app even though there is no content overflowing the div. Need to fix that (DONE)
+- [ ] Add a disply for mobile user. Telling them to go on desktop for best experience.
 - [ ] Allow user to select text box by simply opening the email app
 - [ ] Add Music player
 - [ ] Add more wallpapers
