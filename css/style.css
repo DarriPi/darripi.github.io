@@ -2,6 +2,14 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Mobile gate display */
+#mobile-gate {
+  display: none;
+}
+#desktop-ui {
+  display: block;
+}
+
 /* This is the background for the website */
 body {
     background-image: url("../images/backgrounds/1.png"); 
