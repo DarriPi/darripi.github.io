@@ -12,8 +12,64 @@
     <title>Darian Pietersen</title>
 </head>
 <body>
-    <div id="mobile-gate">
-        <h1>Mobile Display</h1>
+    <div id="mobile-gate" class="container">
+        <h1>Desktop Experience</h1>
+        <p>
+            This portfolio is designed as a desktop-style experience. 
+            For the best experience, please view on a larger screen.
+        </p>
+
+        <!-- Icons -->
+        <div class="row">
+            <div class="col iconItem">
+                <a href="resources/Darian_Pietersen_Resume.pdf" target="blank">
+                    <img class="iconImages" src="./images/icons/book.png"> <br>
+                    <span>CV</span>
+                </a>
+            </div>
+            <div class="col iconItem">
+                <a href="mailto:darianpietersen123@gmail.com">
+                <img class="iconImages" src="./images/icons/letter.png"> <br>
+                <span>Email</span>
+                </a>
+            </div>
+            <div class="w-100"></div>
+            <div class="col iconItem">
+                <a href="https://www.linkedin.com/in/darian-pietersen/" target="_blank">
+                    <img class="iconImages" src="./images/icons/linkedin (2).png"> <br>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            <div class="col iconItem">
+                <a href="https://github.com/DarriPi" target="_blank">
+                    <img class="iconImages" src="./images/icons/meme_cat.png"> <br>
+                    <span>Github</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- User same footer for the mobile gate as well -->
+        <!-- ****** Task bar  ****** -->
+        <footer>
+            <!-- ***** TODO: REMEMBER THE LITTLE AI ASSIST -->
+            <div class="robot" style="display: none;"> 
+                <img src="./images/icons/robot.png">
+            </div>
+            <div class="taskbar">
+                <div class="heart">
+                    <img src="./images/icons/heart.png" height="33px" width="33px">
+                </div>
+
+                <!-- Copy right -->
+                <div class="copy-right">
+                    Made by Darian Pietersen &copy; 2025
+                </div>
+
+                <div class="time-display" id="dateTime" style="text-align: right;">
+                    <span id="date"></span>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <div id="desktop-ui">
