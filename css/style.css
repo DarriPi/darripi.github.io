@@ -10,6 +10,22 @@
   display: block;
 }
 
+@media (max-width: 768px) {
+  #mobile-gate {
+    display: flex;
+    flex-direction: column;
+    justify-content: column;
+    align-items: center;
+    text-align: center;
+
+    height: 100vh;
+    padding: 24px;
+    gap: 20px;
+    background: #1c1c1c;
+    color: white;
+  }
+}
+
 /* This is the background for the website */
 body {
     background-image: url("../images/backgrounds/1.png"); 
