@@ -370,7 +370,7 @@ table {
   font-size: small;
 }
 #project-display {
-  overflow-y: scroll; /* Add vertical scrollbar if content overflows */
+  overflow-y: auto; /* Add vertical scrollbar if content overflows */
   overflow-x: hidden;
 }
 
