@@ -14,7 +14,7 @@ function wallpapers() {
     hiddenDiv.style.left = '300px'
 
     let wallpapers = [ 
-        ['images/backgrounds/1.png', 'images/backgrounds/2.png'], 
+        ['images/backgrounds/WelcomeToPortfolio.gif', 'images/backgrounds/1.png'], 
         ['images/backgrounds/3.png', 'images/backgrounds/4.png'],
         ['images/backgrounds/5.png', 'images/backgrounds/6.png'],
         ['images/backgrounds/7.png', 'images/backgrounds/8.png'],
