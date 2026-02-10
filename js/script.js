@@ -1,30 +1,27 @@
+// This piece of code will format the date and time in the taskbar. 
+// Optimized with help from Chat
+const dateTimeEl = document.getElementById("dateTime");
+
 function formatDateTime() {
-    let now = new Date();
-    let year = now.getFullYear();
-    let month = now.getMonth() + 1; // getMonth() returns 0-11, so add 1 for 1-12
-    let day = now.getDate();
-    let hours = now.getHours();
-    let minutes = now.getMinutes();
+  const now = new Date();
 
-    if (minutes < 10) {
-        minutes = '0' + minutes
-    }
-    if (hours < 10) {
-        hours = '0' + hours
-    }
-    if (month < 10) {
-        month = '0' + month
-    }
-    if (day < 10) {
-        day = '0' + day
-    }
+  const time = now.toLocaleTimeString("en-GB", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 
-    const formattedDate = hours + ':' + minutes + '\n' + year + '/' + month + '/' + day
-    document.getElementById("dateTime").innerHTML = formattedDate // formate date
- }
- 
-// call formateDateTime every second
+  const date = now.toLocaleDateString("en-GB", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).replaceAll("/", "/");
+
+  dateTimeEl.textContent = `${time}\n${date}`;
+}
+
+formatDateTime();
 setInterval(formatDateTime, 1000);
+
 
 // App stack that will be used
 let appStack = []
