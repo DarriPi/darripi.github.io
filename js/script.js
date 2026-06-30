@@ -1,6 +1,7 @@
 // This piece of code will format the date and time in the taskbar. 
 // Optimized with help from Chat
 const dateTimeEl = document.getElementById("dateTime");
+document.getElementById("year").textContent = new Date().getFullYear();
 
 function formatDateTime() {
   const now = new Date();
